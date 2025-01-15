@@ -1,5 +1,11 @@
+import "./style.css";
+
 function App() {
-  return <></>;
+  return (
+    <>
+      <button className="square">X</button>
+    </>
+  );
 }
 
 export default App;
