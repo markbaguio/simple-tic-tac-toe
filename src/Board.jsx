@@ -8,6 +8,13 @@ function Board() {
   function handleClick(square) {
     const nextSquares = squares.slice();
     // nextSquares[square] = "X";
+
+    // check if the square is not empty.
+    // if the square has an "X" or "O" already. do nothing.
+    if (squares[square]) {
+      return;
+    }
+
     xIsNext ? (nextSquares[square] = "X") : (nextSquares[square] = "O");
     setSquares(nextSquares);
     setXIsNext(!xIsNext);
