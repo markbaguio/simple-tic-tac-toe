@@ -3,11 +3,14 @@ import Square from "./Square";
 
 function Board() {
   const [squares, setSquares] = useState(Array(9).fill(null));
+  const [xIsNext, setXIsNext] = useState(true);
 
   function handleClick(square) {
     const nextSquares = squares.slice();
-    nextSquares[square] = "X";
+    // nextSquares[square] = "X";
+    xIsNext ? (nextSquares[square] = "X") : (nextSquares[square] = "O");
     setSquares(nextSquares);
+    setXIsNext(!xIsNext);
   }
 
   return (
