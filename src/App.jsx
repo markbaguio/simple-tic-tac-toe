@@ -1,9 +1,10 @@
+import Board from "./board";
 import "./style.css";
 
 function App() {
   return (
     <>
-      <button className="square">X</button>
+      <Board />
     </>
   );
 }
